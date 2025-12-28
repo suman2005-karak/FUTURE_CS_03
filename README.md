@@ -79,7 +79,7 @@ Files are encrypted **before storage** and decrypted **only at the time of downl
 
 ---
 
-###conclusion
+
 ✅ Conclusion
 
 The Secure File Sharing System developed in this project successfully demonstrates the practical application of cryptography and secure backend development principles. By implementing AES-256 encryption, files are protected before storage, ensuring data confidentiality and security at rest. Decryption is strictly performed only during authorized download requests, preventing unauthorized or direct access to sensitive data.
