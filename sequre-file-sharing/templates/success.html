@@ -1,0 +1,202 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Successful</title>
+</head>
+<body>
+    <h2>✅ File Uploaded & Encrypted Successfully</h2>
+
+    <p>Your file has been securely encrypted and stored.</p>
+
+    <a href="/download/{{ filename }}">
+        <button>⬇️ Download Decrypted File</button>
+    </a>
+
+    <br><br>
+    <a href="/">Upload Another File</a>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Successful - File Encrypted</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 50px 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: scaleIn 0.6s ease-out;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            color: #2e7d32;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .file-info {
+            background: #f1f8f4;
+            border-left: 4px solid #2e7d32;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 25px 0;
+            text-align: left;
+        }
+
+        .file-info strong {
+            color: #2e7d32;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .file-name {
+            color: #333;
+            font-family: monospace;
+            font-size: 14px;
+            word-break: break-all;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(17, 153, 142, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(17, 153, 142, 0.6);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #11998e;
+            border: 2px solid #11998e;
+        }
+
+        .btn-secondary:hover {
+            background: #f0faf8;
+            transform: translateY(-2px);
+        }
+
+        .actions {
+            margin-top: 30px;
+        }
+
+        .security-note {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 13px;
+            color: #888;
+        }
+
+        .security-note strong {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✅</div>
+
+        <h1>File Encrypted Successfully!</h1>
+
+        <p class="message">
+            Your file has been encrypted with AES-256 encryption and securely stored. 
+            You can now download the decrypted version anytime.
+        </p>
+
+        <div class="file-info">
+            <strong>📄 File Name:</strong>
+            <div class="file-name">{{ filename }}</div>
+        </div>
+
+        <div class="actions">
+            <a href="/download/{{ filename }}" class="btn btn-primary">
+                ⬇️ Download Decrypted File
+            </a>
+            <br>
+            <a href="/" class="btn btn-secondary">
+                ⬆️ Upload Another File
+            </a>
+        </div>
+
+        <div class="security-note">
+            <strong>🔐 Security Note:</strong><br>
+            Your files are encrypted at rest and decrypted only during download. 
+            The encryption key is stored securely on the server.
+        </div>
+    </div>
+</body>
+</html>

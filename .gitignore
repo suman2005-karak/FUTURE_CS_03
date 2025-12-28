@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+venv/
+secret.key
+uploads/*
+encrypted_files/*
+.DS_Store
+Thumbs.db
